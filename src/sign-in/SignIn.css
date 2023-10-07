@@ -1,0 +1,76 @@
+.SignIn {
+    text-align: center;
+    background-color: #E4E4E4;
+}
+  
+.SignIn-header {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    color: #000000;
+    margin-top: 5%;
+    font-family: Manjari;
+    font-size: 45pt;
+}
+  
+.SignIn-description {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    color: #000000;
+    font-family: Manjari;
+    font-size: 30pt;
+    margin-top: 5%;
+}
+
+.SignIn-rectangle {
+    color: #EFEFEA;
+    font-family: Manjari;
+    font-size: 10pt;
+    background: rgb(217, 217, 217, 0.8);
+    margin-top: 4%;
+    height: 30%;
+    width: 25%;
+    border: 0.5px solid #000000;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.SignIn-rectangle-input {
+    color: #000000;
+    font-family: Manjari;
+    font-size: 15pt;
+    background: #FFFFFF;
+    margin-top: 1%;
+    height: 13%;
+    width: 90%;
+    text-align: left;
+    border: 0.5px solid #000000;
+    border-radius: 10px;
+}
+
+.SignIn-div-settings {
+    margin-top: 2%;
+    font-size: 11pt;
+    text-align: left;
+    margin-left: 5%;
+    font-family: Manjari;
+    color: #000000;
+}
+
+.SignIn-sign-in-button {
+    color: #000000;
+    font-family: Manjari;
+    font-size: 15pt;
+    background: #FFE500;
+    text-align: center;
+    border: 0.5px solid #000000;
+    border-radius: 10px;
+    height: 40px;
+    width: 90%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}

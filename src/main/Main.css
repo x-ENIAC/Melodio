@@ -1,0 +1,93 @@
+.Main {
+    text-align: center;
+    background-color: #EFEFEA;
+    display: flex;
+    flex-direction: row;
+}
+  
+.Main-header {
+    text-align: left;
+    /* padding: 8%; */
+    font-size: 40pt;
+    font-family: Manjari;
+    border: 0px;
+}
+  
+.Main-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    font-family: Manjari;
+    font-size: 30pt;
+}
+
+.Main-left-panel {
+    color: #EFEFEA;
+    font-family: Manjari;
+    font-size: 10pt;
+    background: #E4E4E4;
+    height: 100%;
+    width: 12%;
+    position: fixed;
+    float: left;
+    border: 0.5px solid #000000;
+    flex-grow: 0;
+}
+
+.Main-right-panel {
+    color: #000000;
+    font-family: Manjari;
+    font-size: 10pt;
+    background: #EFEFEE;
+    height: 100%;
+    width: 88%;
+    float: left;
+    position: relative;
+    margin-top: 10%;
+    margin-left: 15%;
+    flex-grow: 0;
+}
+
+.Main-left-panel-deactive-button {
+    color: #000000;
+    font-family: Manjari;
+    font-size: 20pt;
+    height: 5%;
+    text-align: center;
+}
+
+.Main-left-panel-active-button {
+    color: #000000;
+    font-family: Manjari;
+    font-size: 20pt;
+    background: #FFE500;
+    height: 5%;
+    text-align: center;
+}
+
+.Main-logo {
+    margin-top: 2%;
+    margin-left: 10%;
+    height: 14%;
+    width: 60%;
+}
+
+.Main-active-button {
+    color: #000000;
+    font-family: Manjari;
+    font-size: 20pt;
+    background: #FFE500;
+    text-align: center;
+    border: 0px;
+}
+
+.Main-deactive-button {
+    color: #000000;
+    font-family: Manjari;
+    font-size: 20pt;
+    background: #E4E4E4;
+    text-align: center;
+    border: 0px;
+}
