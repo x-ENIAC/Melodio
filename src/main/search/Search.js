@@ -1,11 +1,11 @@
 import React, { Component }  from 'react';
-import './Main.css';
+import './Search.css';
 import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import logo from "../pictures/nota4.png"
-import search from "../pictures/search.png"
+import logo from "../../pictures/nota4.png"
+import search from "../../pictures/search.png"
 
-function Main() {
+function Search() {
   const [color, setColor] = useState("rgb(239, 239, 239, 1)");
   const click = color => {
     setColor(color)
@@ -18,10 +18,10 @@ function Main() {
 
   return (
     <div className="Main">
-      <div className="Main-left-panel">
+      <section className="Main-left-panel">
         <img src={logo} className="Main-logo" onClick={() => navigate("../main")}/>
-        <div className="Main-left-panel-active-button">
-          <button className="Main-active-button" onClick={
+        <div className="Main-left-panel-deactive-button">
+          <button className="Main-deactive-button" onClick={
               () => navigate("../main")}>Main page</button>
         </div>
         <div className="Main-left-panel-deactive-button">
@@ -32,13 +32,18 @@ function Main() {
           <button className="Main-deactive-button" onClick={
               () => navigate("../playlists")}>Playlists</button>
         </div>
-      </div>
+      </section>
       <main className="Main-right-panel">
         <img src={search} className="Main-search" onClick={() => navigate("../search")}/>
-        <div className='Main-header'>Main page</div>
+        <input
+          type="text"
+          name="username"
+          className="Search-rectangle-input"
+        />
+        <div className='Main-header'>Search</div>
       </main>
     </div>
   );
 }
 
-export default Main;
+export default Search;

@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './app/App';
 import SignIn from "./sign-in/SignIn";
+import SignUp from "./sign-up/SignUp";
+import Search from "./main/search/Search";
 import Main from "./main/Main";
 import LikedSongs from "./main/liked-songs/LikedSongs";
 import Playlists from "./main/playlists/Playlists";
@@ -15,6 +17,8 @@ root.render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/signIn" element={<SignIn />} />
+      <Route path="/signUp" element={<SignUp />} />
+      <Route path="/search" element={<Search />} />
       <Route path="/main" element={<Main />} />
       <Route path="/likedSongs" element={<LikedSongs />} />
       <Route path="/playlists" element={<Playlists />} />

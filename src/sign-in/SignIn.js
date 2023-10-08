@@ -37,9 +37,11 @@ function SignIn() {
             />
         </label>
         <div>
-          <button className="SignIn-sign-in-button" onClick={
-          () => navigate("../main")}>Sign in</button>
+          <button className="SignIn-sign-in-button" onClick={() => navigate("../main")}>Sign in</button>
         </div>
+      </div>
+      <div className="SignIn-rectangle">
+        <button className="Another-button" onClick={() => navigate("../signUp")}>New to Melodio? Create an account</button>
       </div>
     </div>
   );

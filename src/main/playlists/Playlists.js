@@ -3,6 +3,7 @@ import './Playlists.css';
 import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import logo from "../../pictures/nota4.png"
+import search from "../../pictures/search.png"
 
 function Playlists() {
   const [color, setColor] = useState("rgb(239, 239, 239, 1)");
@@ -18,7 +19,7 @@ function Playlists() {
   return (
     <div className="Main">
       <section className="Main-left-panel">
-        <img src={logo} className="Main-logo"></img>
+        <img src={logo} className="Main-logo" onClick={() => navigate("../main")}/>
         <div className="Main-left-panel-deactive-button">
           <button className="Main-deactive-button" onClick={
               () => navigate("../main")}>Main page</button>
@@ -33,10 +34,10 @@ function Playlists() {
         </div>
       </section>
       <main className="Main-right-panel">
-        <div className='Playlists-header'>Playlists</div>
+        <div><img src={search} className="Main-search" onClick={() => navigate("../search")}/></div>
+        <div className='Main-header'>Playlists</div>
       </main>
     </div>
-    
   );
 }
 

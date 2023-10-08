@@ -3,6 +3,7 @@ import './LikedSongs.css';
 import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import logo from "../../pictures/nota4.png"
+import search from "../../pictures/search.png"
 
 function LikedSongs() {
   const [color, setColor] = useState("rgb(239, 239, 239, 1)");
@@ -18,7 +19,7 @@ function LikedSongs() {
   return (
     <div className="Main">
       <div className="Main-left-panel">
-        <img src={logo} className="Main-logo"></img>
+        <img src={logo} className="Main-logo" onClick={() => navigate("../main")}/>
         <div className="Main-left-panel-deactive-button">
           <button className="Main-deactive-button" onClick={
               () => navigate("../main")}>Main page</button>
@@ -33,7 +34,8 @@ function LikedSongs() {
         </div>
       </div>
       <main className="Main-right-panel">
-        <div className='Liked-songs-header'>Liked songs</div>
+        <img src={search} className="Main-search" onClick={() => navigate("../search")}/>
+        <div className='Main-header'>Liked songs</div>
       </main>
     </div>
   );
