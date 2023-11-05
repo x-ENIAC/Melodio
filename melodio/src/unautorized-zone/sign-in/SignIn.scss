@@ -1,0 +1,99 @@
+.sign {
+  height: 100%;
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
+  background-color: rgb(228, 228, 228, 1);
+}
+
+.sign-header {
+  color: #000000;
+  font-family: Manjari;
+  font-size: 45pt;
+}
+
+.rectangle-with-sign-buttons {
+  color: #EFEFEA;
+  font-family: Manjari;
+  font-size: 10pt;
+  background: rgb(217, 217, 217, 0.8);
+  margin-top: 2%;
+  width: 21%;
+  border: 0.5px solid #000000;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-input-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.sign-input {
+  color: #000000;
+  font-family: Manjari;
+  font-size: 20pt;
+  background: #FFFFFF;
+  margin-top: 1%;
+  height: 80%;
+  width: 80%;
+  text-align: left;
+  border: 0.5px solid #000000;
+  border-radius: 30px;
+  padding: 0 15px 0 15px;
+}
+
+
+.sign-div-settings {
+  margin-top: 2%;
+  font-size: 11pt;
+  text-align: left;
+  font-family: Manjari;
+  color: #000000;
+}
+
+.sign-button {
+  color: #000000;
+  font-family: Manjari;
+  font-size: 15pt;
+  background: #FFE500;
+  text-align: center;
+  border: 0.5px solid #000000;
+  border-radius: 10px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.another-sign-button {
+  color: #000000;
+  font-family: Manjari;
+  font-size: 14pt;
+  background: #D9D9D9;
+  text-align: center;
+  border: 0.5px solid #000000;
+  border-radius: 10px;
+  margin-top: 10%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}
+
+.sign-error {
+  color: #a01010;
+  margin-top: 2%;
+  justify-content: center;
+}

@@ -1,0 +1,44 @@
+.search-music-input {
+    color: #000000;
+    font-family: Manjari;
+    font-size: 20pt;
+    background: #FFFFFF;
+    
+    margin-top: 1%;
+    
+    height: 80%;
+    width: 100%;
+    
+    text-align: left;
+
+    border: 0.5px solid #000000;
+    border-radius: 30px;
+    padding: 0 15px 0 15px;
+}
+
+.search-music-input:focus {
+    outline: none;
+}
+
+.search-music-input::placeholder {
+    margin-left: 15px;
+}
+
+.search-panel {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    gap: 5%;
+    margin-right: 4%;
+    width: 90%;
+    height: 80%;
+    // flex-grow: 1;
+}
+
+.NotMain-header {
+    text-align: left;
+    font-size: 40pt;
+    font-family: Manjari;
+    border: 0px;
+    margin-top: 5%;
+}

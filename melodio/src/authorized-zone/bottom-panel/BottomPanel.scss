@@ -1,0 +1,16 @@
+.bottom-panel-wrap {
+    display: flex;
+    flex-direction: row;
+    height: 6%;
+    width: 100%;
+}
+
+.bottom-panel {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    border: 0.5px solid #000000;
+    background-color: #FFE500;
+}

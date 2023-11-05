@@ -1,0 +1,122 @@
+.song {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.song-in-bottom-panel-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.song-info {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.song-name {
+    font-size: 12pt;
+    font-family: Manjari;
+}
+
+.song-author {
+    font-size: 8pt;
+    font-family: Manjari;
+}
+
+.song-actions {
+    height: 100%;
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+.song-duration {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12pt;
+}
+
+.song-action-button {
+    height: 40%;
+    width: 1.5%;
+}
+
+.song-play-button {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.song-move-button {
+    height: 50%;
+    width: 50%;
+}
+
+.song-is-liked-button {
+    height: 70%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.song-wrapper {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid #000000;
+}
+
+.song-details {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.song-like-image {
+    height: 100%;
+    width: 90%;
+}
+
+.song-box-for-items {
+    height: 70%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.song-play-not-in-bottom-image {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
