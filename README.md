@@ -30,28 +30,28 @@
 
 Зона для неавторизованных пользователей:
 1. Главная страница
-![Главная страница](../screenshotes/main_for_not_authorised.png)
+![Главная страница](https://github.com/x-ENIAC/Melodio/blob/master/screenshotes/main_for_not_authorised.png)
 
 2. Страница с авторизацией
-![Страница с авторизацией](../screenshotes/sign_in.png)
+![Страница с авторизацией](https://github.com/x-ENIAC/Melodio/blob/master/screenshotes/sign_in.png)
 
 3. Страница с регистрацией
-![Страница с регистрацией](../screenshotes/sign_up.png)
+![Страница с регистрацией](https://github.com/x-ENIAC/Melodio/blob/master/screenshotes/sign_up.png)
 
 
 Зона для авторизованных пользователей:
 1. Главная страница
-![Главная страница](../screenshotes/main_for_authorised.png)
+![Главная страница](https://github.com/x-ENIAC/Melodio/blob/master/screenshotes/main_for_authorised.png)
 
 2. Понравившиеся песни
-![Понравившиеся песни](../screenshotes/liked_songs.png)
+![Понравившиеся песни](https://github.com/x-ENIAC/Melodio/blob/master/screenshotes/liked_songs.png)
 
-3. Плейлисты
-![Плейлисты](../screenshotes/playlists.png)
+4. Плейлисты
+![Плейлисты](https://github.com/x-ENIAC/Melodio/blob/master/screenshotes/playlists.png)
 
-4. Конкретный плейлист
-![Плейлист "Популярное"](../screenshotes/popular_songs.png)
-![Один из пользовательских плейлистов](../screenshotes/one_user_playlist.png)
+5. Конкретный плейлист
+![Плейлист "Популярное"](https://github.com/x-ENIAC/Melodio/blob/master/screenshotes/popular_songs.png)
+![Один из пользовательских плейлистов](https://github.com/x-ENIAC/Melodio/blob/master/screenshotes/one_user_playlist.png)
 
 4. Поиск
-![Поиск](../screenshotes/search.png)
+![Поиск](https://github.com/x-ENIAC/Melodio/blob/master/screenshotes/search.png)
