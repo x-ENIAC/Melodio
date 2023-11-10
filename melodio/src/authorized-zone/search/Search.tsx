@@ -1,49 +1,50 @@
 import './Search.scss';
 import '../main/Main.scss'
-import { useNavigate } from "react-router-dom";
-import logo from './../../materials/logo.png';
-import search from "./../../materials/search.png"
 import BottomPanel from '../bottom-panel/BottomPanel';
+import { RenderSearchedSongs, RenderSongs, Song } from '../liked-songs/song/Song';
+import RightTopPanel from '../right-top-panel/RightTopPanel';
+import { useState } from 'react';
+import LeftPanel from '../main/left-panel/LeftPanel';
+import NotMainHeader from '../playlists/not-main-header/NotMainHeader';
+
 
 function Search(props: any) {
-  const buttonsList = [
-    { name: "Main page", navigatePath: "../main", buttonClassName: "deactive-button", divClassName: "deactive-div" },
-    { name: "Liked songs", navigatePath: "../likedSongs", buttonClassName: "deactive-button", divClassName: "deactive-div"},
-    { name: "Playlists", navigatePath: "../playlists", buttonClassName: "deactive-button", divClassName: "deactive-div"}
-  ]
+  // const [searchText, setSearchText] = useState<string>('');
+  // const [searchResult, setSearchResult] = useState<string>('');
+  const [isEnterPressed, setIsEnterPressed] = useState<boolean>(false);
 
-  let buttons = buttonsList.map((buttonName) => {
-    return (
-      <div className={ buttonName.divClassName }>
-        <button className={ buttonName.buttonClassName } onClick={
-            () => navigate(buttonName.navigatePath)}>{ buttonName.name }</button>
-      </div>
-    )
-  })
+  const handleKeyDown = (event: any) => {
+    if (event.key == 'Enter') {
+      setIsEnterPressed(true);
+    }
+  }
 
-  const navigate = useNavigate();
+  const submitFoundSongs = (songs: Song[]) => {
+    return RenderSearchedSongs(songs, props);
+  }
 
   return (
     <div className="main">
       <div className="left-and-right-panels">
-        <div className="left-panel">
-          <img src={logo} className="main-logo" onClick={() => navigate("../main")}/>
-          { buttons }
-        </div>
+        { <LeftPanel /> }
         <div className="right-panel">
           <div className='right-top-panel-wrap'>
-            <div className='right-top-panel'>
+            {/* <div className='right-top-panel'>
               <div className='search-panel'>
-                <input type="text" name="username" placeholder='name' className="search-music-input"/>
+                <input type="text" name="username" placeholder='name' className="search-music-input" onChange={(event) => setSearchText(event.target.value)} onKeyDown={handleKeyDown}/>
               </div>
               <img src={search} className="main-search" onClick={() => navigate("../search")}/>
               <div className='avatar-circle'><div className="avatar-text">L</div></div>
-            </div>
+            </div> */}
+            { <RightTopPanel submitFoundSongs={submitFoundSongs} {...props}/> }
           </div>
-          <div className='not-main-header'>Search</div>
+          { < NotMainHeader text="Search" /> }
+          <div className='liked-songs-content'>
+            { isEnterPressed == true ? submitFoundSongs(props.submitFoundSongs()) : "" }
+          </div>
         </div>
       </div>
-      { <BottomPanel getSongsByPlaylistId={props.getSongsByPlaylistId} getPlaylistsByLabel={props.getPlaylistsByLabel} getSongById={props.getSongById} getPlayingSong={props.getPlayingSong} changePlayingSong={props.changePlayingSong}/> }
+      { <BottomPanel getSongsByPlaylistId={props.getSongsByPlaylistId} getPlaylistsByLabel={props.getPlaylistsByLabel} getSongById={props.getSongById} getPlayingSong={props.getPlayingSong} changePlayingSong={props.changePlayingSong} changePlayingSongState={props.changePlayingSongState}/> }
     </div>
   );
 }

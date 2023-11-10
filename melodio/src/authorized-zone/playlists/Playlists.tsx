@@ -1,10 +1,10 @@
 import './Playlists.scss';
 import '../main/Main.scss'
 import { NavigateFunction, useNavigate } from "react-router-dom";
-import logo from './../../materials/logo.png';
 import RightTopPanel from './../right-top-panel/RightTopPanel';
 import BottomPanel from '../bottom-panel/BottomPanel';
-import { Song } from '../liked-songs/song/Song';
+import LeftPanel from '../main/left-panel/LeftPanel';
+import NotMainHeader from './not-main-header/NotMainHeader';
 
 class PlaylistClass {
   id: number;
@@ -68,50 +68,25 @@ function GetPlaylist(playlistId: number, playlistName: string, playlistDescripti
 }
 
 function Playlists(props: any) {
-  const buttonsList = [
-    { name: "Main page", navigatePath: "../main", buttonClassName: "deactive-button", divClassName: "deactive-div" },
-    { name: "Liked songs", navigatePath: "../likedSongs", buttonClassName: "deactive-button", divClassName: "deactive-div"},
-    { name: "Playlists", navigatePath: "../playlists", buttonClassName: "active-button", divClassName: "active-div"}
-  ]
-
-  let buttons = buttonsList.map((buttonName) => {
-    return (
-      <div className={ buttonName.divClassName }>
-        <button className={ buttonName.buttonClassName } onClick={
-            () => navigate(buttonName.navigatePath)}>{ buttonName.name }</button>
-      </div>
-    )
-  })
-
   const navigate = useNavigate();
 
   return (
     <div className="main">
       <div className='left-and-right-panels'>
-        <div className="left-panel">
-          <img src={logo} className="main-logo" onClick={() => navigate("../main")}/>
-          { buttons }
-        </div>
+        { <LeftPanel activeButtonName="Playlists" /> }
         <div className="right-panel">
           <div className="right-top-panel-wrap">
-              { <RightTopPanel/> }
-            </div>
+            { <RightTopPanel {...props}/> }
+          </div>
           <div className='right-panel-content'>
-            <div className='playlists-header'>Playlists</div>
+            { < NotMainHeader text="Playlists" /> }
             <div className='playlists-content'>
-              {/* { GetPlaylist(10, "Playlist 1", "Description", navigate) }
-              { GetPlaylist(11, "Playlist 2", "Description", navigate) }
-              { GetPlaylist(12, "Playlist 3", "Description", navigate) }
-              { GetPlaylist(13, "Playlist 4", "Description", navigate) }
-              { GetPlaylist(14, "Playlist 5", "Description", navigate) }
-              { GetPlaylist(15, "Playlist 6", "Description", navigate) } */}
-              {/* { GetPlaylists(siteContent.getPlaylists(), false) } */}
               { GetUserPlaylists(props.getPlaylistsByLabel("user_playlist")) }
             </div>
           </div>
         </div>
       </div>
-      { <BottomPanel getSongsByPlaylistId={props.getSongsByPlaylistId} getPlaylistsByLabel={props.getPlaylistsByLabel} getSongById={props.getSongById} getPlayingSong={props.getPlayingSong} changePlayingSong={props.changePlayingSong}/> }
+      { <BottomPanel getSongsByPlaylistId={props.getSongsByPlaylistId} getPlaylistsByLabel={props.getPlaylistsByLabel} getSongById={props.getSongById} getPlayingSong={props.getPlayingSong} changePlayingSong={props.changePlayingSong} changePlayingSongState={props.changePlayingSongState}/> }
     </div>
   );
 }

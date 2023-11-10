@@ -66,6 +66,61 @@ let testSongs : Song[] = [
       name: "Fools Gold",
       author: "The Stone Roses",
       duration: "3:55",
+   },
+   ////////////////
+   {
+      id: 11,
+      name: "Take me out",
+      author: "Franz Ferdinand",
+      duration: "3:57",
+   },
+   {
+      id: 12,
+      name: "How Did We Get So Dark?",
+      author: "Royal Blood",
+      duration: "3:17",
+   },
+   {
+      id: 13,
+      name: "Satisfaction",
+      author: "The Rolling Stones",
+      duration: "3:42",
+   },
+   {
+      id: 14,
+      name: "Во время дождя",
+      author: "Nauthilus Pompilius",
+      duration: "3:33",
+   },
+   {
+      id: 15,
+      name: "Линия жизни",
+      author: "Сплин",
+      duration: "3:02",
+   },
+   {
+      id: 16,
+      name: "Секрет",
+      author: "Агата Кристи",
+      duration: "2:47",
+   },
+   {
+      id: 17,
+      name: "Земля",
+      author: "Маша и Медведи",
+      duration: "5:06",
+   },
+   {
+      id: 18,
+      name: "Счастье",
+      author: "Би-2",
+      duration: "4:07",
+   },
+   {
+      id: 19,
+      name: "Вечно молодой",
+      author: "Смысловые галлюцинации",
+      duration: "3:15",
    }
 ];
 

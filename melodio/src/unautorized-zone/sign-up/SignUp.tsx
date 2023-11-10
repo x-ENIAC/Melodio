@@ -42,6 +42,11 @@ function SignUp(props: any) {
       setError('This login is already exists!');
       return;
     }
+
+    if (props.getUserByEmail(email) != undefined) {
+      setError('This email is already exists!');
+      return;
+    }
     try {
       props.addUser(login, password, email);
       navigate("../main");
@@ -67,11 +72,11 @@ function SignUp(props: any) {
         </div>
         <div className='sign-input-box'>
           <div className="sign-div-settings">Password</div>
-          <input type="text" className='sign-input' value={password} onChange={(event) => setPassword(event.target.value)}/>
+          <input type="password" className='sign-input' value={password} onChange={(event) => setPassword(event.target.value)}/>
         </div>
         <div className='sign-input-box'>
           <div className="sign-div-settings">Repeat password</div>
-          <input type="text" className='sign-input' value={repeatedPassword} onChange={(event) => setRepeatedPassword(event.target.value)}/>
+          <input type="password" className='sign-input' value={repeatedPassword} onChange={(event) => setRepeatedPassword(event.target.value)}/>
         </div>
         <div className='sign-error'>{error}</div>
         <div>
