@@ -1,30 +1,37 @@
 import './SpecificPlaylist.scss';
 import { RenderSongs, Song } from '../liked-songs/song/Song';
-import { useNavigate, useParams } from "react-router-dom";
-import playSongNotInBottom from './../../materials/playSongNotInBottom.png';
-import songIsLiked from './../../materials/heartFilled.png';
-import songIsNotLiked from './../../materials/heartNotFilled.png';
-import logo from './../../materials/logo.png';
+import { useParams } from "react-router-dom";
 import RightTopPanel from '../right-top-panel/RightTopPanel';
 import BottomPanel from '../bottom-panel/BottomPanel';
 import '../main/Main.scss'
 import LeftPanel from '../main/left-panel/LeftPanel';
 import NotMainHeader from './not-main-header/NotMainHeader';
+import { useEffect, useState } from 'react';
 
 function SpecificPlaylist(props: any) {
-  const getSongsInThisPlaylist = (currentPlaylistId: number) => {
-    const songs: Song[] = [];
-    const songsIds = props.getPlaylistById(currentPlaylistId).songs_list as Array<number>;
-    if (songsIds == null) {
-      return (
-        <div className='no-songs-inscription'>There are no songs here yet!</div>
-      );
+  const RenderPlaylist = (songs: any) => {
+    const songsObjects: Song[] = [];
+    for (let song in songs) {
+      var currentSong = new Song(songs[song]["id"], songs[song]["name"], songs[song]["author"], songs[song]["duration"]);
+      songsObjects.push(currentSong);
     }
-    songsIds.forEach(id => {
-      songs.push(props.getSongById(id));
-    });
-    return RenderSongs(songs, props);
+    return RenderSongs(songsObjects, props);
   }
+
+  const [playlistContent, setPlaylistContent] = useState([]);
+
+  useEffect(() => {
+    fetch(`http://127.0.0.1:8080/playlists/${currentPlaylistId}/songs`)
+      .then(data => {
+        return data.json();
+      })
+      .then(data => {
+        setPlaylistContent(data);
+      })
+      .catch(err => {
+        console.log("Troubles with rendering playlist content.");
+      });
+  }, []);
 
   const params = useParams();
   
@@ -40,7 +47,7 @@ function SpecificPlaylist(props: any) {
           </div>
           { < NotMainHeader text={ props.getPlaylistById(currentPlaylistId).name } /> }
           <div className='liked-songs-content'>
-            { getSongsInThisPlaylist(currentPlaylistId) }
+            { RenderPlaylist(playlistContent) }
           </div>
         </div>
       </div>

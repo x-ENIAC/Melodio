@@ -72,11 +72,11 @@ function SignUp(props: any) {
         </div>
         <div className='sign-input-box'>
           <div className="sign-div-settings">Password</div>
-          <input type="password" className='sign-input' value={password} onChange={(event) => setPassword(event.target.value)}/>
+          <input type="text" className='sign-input' value={password} onChange={(event) => setPassword(event.target.value)}/>
         </div>
         <div className='sign-input-box'>
           <div className="sign-div-settings">Repeat password</div>
-          <input type="password" className='sign-input' value={repeatedPassword} onChange={(event) => setRepeatedPassword(event.target.value)}/>
+          <input type="text" className='sign-input' value={repeatedPassword} onChange={(event) => setRepeatedPassword(event.target.value)}/>
         </div>
         <div className='sign-error'>{error}</div>
         <div>

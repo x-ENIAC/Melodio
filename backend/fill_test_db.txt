@@ -1,0 +1,46 @@
+INSERT INTO playlists (id, name, description) VALUES (0, 'Popular songs', 'It is popular songs');
+INSERT INTO playlists (id, name, description) VALUES (1, 'New songs', 'It is new songs');
+INSERT INTO playlists (id, name, description) VALUES (11, 'Super puper rock', 'Admin rock playlist');
+INSERT INTO playlists (id, name, description) VALUES (12, '«Брат» и «Брат-2»', 'Саундтреки из любимых фильмов');
+
+INSERT INTO songs (id, name, author, duration) VALUES (0, 'Exists', 'Foals', '5:57');
+INSERT INTO songs (id, name, author, duration) VALUES (1, 'Lonely Hunters', 'Foals', '4:37');
+INSERT INTO songs (id, name, author, duration) VALUES (2, 'Numb', 'Linkin Park', '3:07');
+INSERT INTO songs (id, name, author, duration) VALUES (3, 'Think', 'Kaleida', '3:58');
+INSERT INTO songs (id, name, author, duration) VALUES (4, 'Spies', 'Kosheen', '3:39');
+INSERT INTO songs (id, name, author, duration) VALUES (5, 'Woke Up This Morning', 'Alabama 3', '4:10');
+INSERT INTO songs (id, name, author, duration) VALUES (6, 'All Star', 'Smash Mouth', '3:21');
+INSERT INTO songs (id, name, author, duration) VALUES (7, 'Never gonna give you up', 'Rick Astley', '3:32');
+INSERT INTO songs (id, name, author, duration) VALUES (8, 'Narayan', 'The Prodigy', '6:33');
+INSERT INTO songs (id, name, author, duration) VALUES (9, 'Riders on the Storm', 'The Doors', '7:14');
+INSERT INTO songs (id, name, author, duration) VALUES (10, 'Fools Gold', 'The Stone Roses', '3:55');
+INSERT INTO songs (id, name, author, duration) VALUES (11, 'Take me out', 'Franz Ferdinand', '3:57');
+INSERT INTO songs (id, name, author, duration) VALUES (12, 'How Did We Get So Dark?', 'Royal Blood', '3:17');
+INSERT INTO songs (id, name, author, duration) VALUES (13, 'Satisfaction', 'The Rolling Stones', '3:42');
+INSERT INTO songs (id, name, author, duration) VALUES (14, 'Во время дождя', 'Nauthilus Pompilius', '3:33');
+INSERT INTO songs (id, name, author, duration) VALUES (15, 'Линия жизни', 'Сплин', '3:02');
+INSERT INTO songs (id, name, author, duration) VALUES (16, 'Секрет', 'Агата Кристи', '2:47');
+INSERT INTO songs (id, name, author, duration) VALUES (17, 'Земля', 'Маша и Медведи', '5:06');
+INSERT INTO songs (id, name, author, duration) VALUES (18, 'Счастье', 'Би-2', '4:07');
+INSERT INTO songs (id, name, author, duration) VALUES (19, 'Вечно молодой', 'Смысловые Галлюцинации', '3:15');
+
+INSERT INTO users (id, login, password, email) VALUES (0, 'not_authorized', 'not_authorized', 'not_authorized');
+INSERT INTO users (id, login, password, email) VALUES (1, 'admin', 'admin', 'admin@admin.com');
+INSERT INTO users (id, login, password, email) VALUES (2, 'pinkotter', 'help', 'maroonotter@gmail.com');
+
+INSERT INTO SONGS_AND_PLAYLISTS(id, playlist_Id, song_Id) VALUES (0, 0, 1);
+INSERT INTO SONGS_AND_PLAYLISTS(id, playlist_Id, song_Id) VALUES (1, 0, 5);
+INSERT INTO SONGS_AND_PLAYLISTS(id, playlist_Id, song_Id) VALUES (2, 0, 6);
+INSERT INTO SONGS_AND_PLAYLISTS(id, playlist_Id, song_Id) VALUES (3, 0, 7);
+INSERT INTO SONGS_AND_PLAYLISTS(id, playlist_Id, song_Id) VALUES (4, 0, 8);
+INSERT INTO SONGS_AND_PLAYLISTS(id, playlist_Id, song_Id) VALUES (5, 10, 3);
+INSERT INTO SONGS_AND_PLAYLISTS(id, playlist_Id, song_Id) VALUES (6, 10, 5);
+INSERT INTO SONGS_AND_PLAYLISTS(id, playlist_Id, song_Id) VALUES (7, 11, 11);
+INSERT INTO SONGS_AND_PLAYLISTS(id, playlist_Id, song_Id) VALUES (8, 11, 12);
+INSERT INTO SONGS_AND_PLAYLISTS(id, playlist_Id, song_Id) VALUES (9, 11, 13);
+INSERT INTO SONGS_AND_PLAYLISTS(id, playlist_Id, song_Id) VALUES (10, 11, 14);
+INSERT INTO SONGS_AND_PLAYLISTS(id, playlist_Id, song_Id) VALUES (11, 12, 15);
+INSERT INTO SONGS_AND_PLAYLISTS(id, playlist_Id, song_Id) VALUES (12, 12, 16);
+INSERT INTO SONGS_AND_PLAYLISTS(id, playlist_Id, song_Id) VALUES (13, 12, 17);
+INSERT INTO SONGS_AND_PLAYLISTS(id, playlist_Id, song_Id) VALUES (14, 12, 18);
+INSERT INTO SONGS_AND_PLAYLISTS(id, playlist_Id, song_Id) VALUES (15, 12, 19);

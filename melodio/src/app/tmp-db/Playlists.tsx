@@ -24,7 +24,9 @@ let testPlaylists : PlaylistClass[] = [
         name: "New songs",
         description: "It is new songs",
         label: "system_playlist",
-        songs_list: null,
+        songs_list: [
+            7
+        ],
         user_id: -1
     },
     {

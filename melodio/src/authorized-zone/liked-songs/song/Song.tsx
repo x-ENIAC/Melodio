@@ -30,6 +30,12 @@ function SongInBottomPanel(props: any) {
 
   const [is_play, set_is_play] = useState(currentSong.is_playing);
   const handlePlayClick = () => {
+    console.log("PUSH!!! Is_play:", is_play);
+    if (is_play) {
+      fetch(`http://127.0.0.1:8080/song/${currentSong.song.id}/pause`);
+    } else {
+      fetch(`http://127.0.0.1:8080/song/${currentSong.song.id}/play`);
+    }
     set_is_play(!is_play);
     props.changePlayingSongState(!currentSong.is_playing);
   }

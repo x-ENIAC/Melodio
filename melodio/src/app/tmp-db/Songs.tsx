@@ -3,9 +3,9 @@ import { Song } from "../../authorized-zone/liked-songs/song/Song";
 let testSongs : Song[] = [
    {
       id: 0,
-      name: "Exists",
-      author: "Foals",
-      duration: "5:57",
+      name: "Never gonna give you up",
+      author: "Rick Astley",
+      duration: "3:32",
    },
    {
       id: 1,
@@ -45,9 +45,9 @@ let testSongs : Song[] = [
    },
    {
       id: 7,
-      name: "Never gonna give you up",
-      author: "Rick Astley",
-      duration: "3:32",
+      name: "Exists",
+      author: "Foals",
+      duration: "5:57",
    },
    {
       id: 8,
