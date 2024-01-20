@@ -35,24 +35,24 @@
 
 Зона для неавторизованных пользователей:
 1. Главная страница
-![Главная страница](../screenshotes/main_for_not_authorised.png)
+![Главная страница](./screenshotes/main_for_not_authorised.png)
 
 2. Страница с авторизацией
-![Страница с авторизацией](../screenshotes/sign_in.png)
+![Страница с авторизацией](./screenshotes/sign_in.png)
 
 3. Страница с регистрацией
-![Страница с регистрацией](../screenshotes/sign_up.png)
+![Страница с регистрацией](./screenshotes/sign_up.png)
 
 
 Зона для авторизованных пользователей:
 1. Главная страница
-![Главная страница](../screenshotes/main_for_authorised.png)
+![Главная страница](./screenshotes/main_for_authorised.png)
 
 2. Понравившиеся песни
-![Понравившиеся песни](../screenshotes/liked_songs.png)
+![Понравившиеся песни](./screenshotes/liked_songs.png)
 
 3. Плейлисты
-![Плейлисты](../screenshotes/playlists.png)
+![Плейлисты](./screenshotes/playlists.png)
 
 4. Поиск
-![Поиск](../screenshotes/search.png)
+![Поиск](./screenshotes/search.png)
